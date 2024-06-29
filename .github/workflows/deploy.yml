@@ -38,5 +38,5 @@ jobs:
             docker pull ${{ secrets.DOCKER_USERNAME }}/video-transform-service:latest
             docker stop video-transform-service || true
             docker rm video-transform-service || true
-            docker run -d --name video-transform-service -p 5000:5000 \
+            docker run -d --name video-transform-service -p 1234:5000 \
               ${{ secrets.DOCKER_USERNAME }}/video-transform-service:latest
